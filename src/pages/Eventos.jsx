@@ -28,43 +28,45 @@ class Eventos extends Component {
                     <button className='btn btn-primary' type="button" data-toggle="modal" data-target="#myModal" >Adicionar Evento</button>
                 </Header>
                 <Content>
-                    <table className="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">Palestra</th>
-                                <th scope="col">Assunto</th>
-                                <th scope="col">Palestrante</th>
-                                <th scope="col">Horário</th>
-                                <th scope="col">Local</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                eventos.length > 0 ?
+                    <div className="table-responsive">
+                        <table className="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Palestra</th>
+                                    <th scope="col">Assunto</th>
+                                    <th scope="col">Palestrante</th>
+                                    <th scope="col">Horário</th>
+                                    <th scope="col">Local</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    eventos.length > 0 ?
 
-                                    eventos.map((item, index) => {
+                                        eventos.map((item, index) => {
 
-                                        let { name, subject, speaker, schedule, room } = item
+                                            let { name, subject, speaker, schedule, room } = item
 
-                                        return (
-                                            <tr key={index}>
-                                                <td style={{ minWidth: 180 }}>{name}</td>
-                                                <td style={{ maxWidth: 480 }}>{subject}</td>
-                                                <td>{speaker}</td>
-                                                <td>{schedule}</td>
-                                                <td>{room}</td>
-                                            </tr>
-                                        )
-                                    })
+                                            return (
+                                                <tr key={index}>
+                                                    <td style={{ minWidth: 180 }}>{name}</td>
+                                                    <td style={{ maxWidth: 480 }}>{subject}</td>
+                                                    <td>{speaker}</td>
+                                                    <td>{schedule}</td>
+                                                    <td>{room}</td>
+                                                </tr>
+                                            )
+                                        })
 
-                                    :
+                                        :
 
-                                    <tr>
-                                        <td colSpan={5}><h3>Sem eventos cadastrados</h3></td>
-                                    </tr>
-                            }
-                        </tbody>
-                    </table>
+                                        <tr>
+                                            <td colSpan={5}><h3>Sem eventos cadastrados</h3></td>
+                                        </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
 
 
                     { /** modal */}
