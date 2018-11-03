@@ -49,11 +49,21 @@ class Eventos extends Component {
 
                                             return (
                                                 <tr key={index}>
-                                                    <td style={{ minWidth: 180 }}>{name}</td>
-                                                    <td style={{ maxWidth: 480 }}>{subject}</td>
-                                                    <td>{speaker}</td>
-                                                    <td>{schedule}</td>
-                                                    <td>{room}</td>
+                                                    <td style={{ minWidth: 180 }}>
+                                                        <p>{name}</p>
+                                                    </td>
+                                                    <td style={{ maxWidth: 480 }}>
+                                                        <p>{subject}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p>{speaker}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p>{schedule}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p>{room}</p>
+                                                    </td>
                                                 </tr>
                                             )
                                         })
