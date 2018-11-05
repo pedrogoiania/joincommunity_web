@@ -8,7 +8,7 @@
     "production": "webpack --progress -p"
   },
   "keywords": [],
-  "author": "Carol e Elissa",
+  "author": "Pedro Paulo Duarte Silva",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
